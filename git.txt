@@ -1,0 +1,36 @@
+# Get a new remote
+git clone https://bitbucket.org/iamgordonfrog/demo
+
+# Set a new remote
+git remote add origin https://bitbucket.org/iamgordonfrog/demo
+
+# Verify new remote
+git remote -v
+
+# See what branches are there
+git branch -a
+
+# Create a new local branch called integration-testing
+git branch integration-testing
+
+# Checkout/Switch to new local branch called integration-testing
+git checkout integration-testing
+
+# Verify your branches again
+git branch -a
+
+# Add files to local git
+git add .
+git commit -m "branch complete"
+
+# Push the integration-testing branch to remote-repo (https://git@bitbucket.org:iamgordonfrog/ibm-interview.git)
+git push https://bitbucket.org/iamgordonfrog/demo integration-testing
+git push https://github.com/gordonfrog/spring-core-devops master
+*NOTE: if you haven't pushed to master do this first: 
+git push https://bitbucket.org/iamgordonfrog/demo master
+
+# Delete local branch
+git branch -D integration-testing
+
+# Delete remote branch
+git push origin --delete integration-testing
